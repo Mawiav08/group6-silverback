@@ -1,0 +1,346 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0;
+    
+    
+  
+}
+
+header {
+    text-align: center;
+    background-color: #132d46;
+    padding: 7px;
+    width: 100%;
+    color: aliceblue;
+}
+
+/* _____________________________________________ */
+
+nav {
+   width: 100%;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #132d46;
+    
+
+}
+ul {
+ 
+    list-style: none;
+   
+   padding: 0;
+}
+
+
+li {
+    float: left;
+    margin: 0 20px;
+   
+   
+  }
+  
+  a {
+  
+    float: left;
+  display: block;
+  color: gainsboro;
+  text-align: center;
+  padding-right: 40px;
+  padding-left: 40px;
+  text-decoration: none;
+  font-size: 17px;
+  font-size: 20px;
+   
+  }
+
+  a:hover {
+    color:  #01c38d;
+  }
+  /* ________________________________________ */
+
+#Home {
+    width: 100%;
+    height: 900px;
+   padding-top: 100px;
+   background-color: #191e29;
+}
+
+#Home h1 {
+    font-size: 70px;
+    color: #01c38d;
+}
+#Home h1 span {
+    font-weight: lighter;
+    color: white;
+}
+#Home p {
+    font-size: 30px;
+    color: #01c38d;
+}
+/* ___________________________________________________ */
+
+
+/* ___________________________________________________________________goal_________________________________________________________________________*/
+#goals {
+    background-color: #287094;
+}
+.goal-container {
+    margin-bottom: 0px;
+    background-color: #287094;
+    margin: 0px;
+   
+    
+}
+.goal-container h2 {
+    text-align: center;
+    color: aliceblue;
+}
+.goal {
+   
+    border-radius: 5px;
+    padding: 30px;
+    margin-bottom: 10px;
+    
+    color: aliceblue;
+}
+.goal input[type="text"],
+.goal input[type="number"] {
+    width: 200px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+.goal-buttons {
+    margin-top: 10px;
+  
+}
+
+button {
+    background-color: #a3b5c0;
+    border-radius: 6px;
+    color: black
+    
+}
+
+/*__________________________________________________________________e n d o f g o a l_____________________________________________________________ */
+
+
+
+/* transactions__________________________________________________ */
+
+.transaction-form {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #132d46;
+    color: #a3b5c0;
+}
+
+.transaction-form h2 {
+    margin-top: 0;
+}
+
+.transaction-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.transaction-form input[type="number"],
+.transaction-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.transaction-form button {
+    padding: 10px;
+    background-color: #a3b5c0;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.transaction {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.transaction p {
+    margin: 0;
+}
+
+.transaction.expenses {
+    background-color: #FFCCCC;
+}
+
+.transaction.income {
+    background-color: #CCFFCC;
+}
+/* _________________contacts_________________________ */
+
+
+#contact h2{
+    font-size: 30px;
+    font-weight: 600;
+    color: #132d46;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#contact p{
+    color: #0A2940;
+    line-height: 1.6;
+    margin-bottom: 5px;
+    text-align: center;
+}
+#contact .wrapper form{
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    margin: 0 auto;
+}
+#contact .wrapper form input{
+    padding: 8px;
+    border: #ddd 1px solid;
+    outline: none;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+#contact .wrapper form .button{
+    padding: 8px;
+    margin-bottom: 100px;
+    background: #0A2940;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+#contact .wrapper form .button:hover{
+    background: #1A1B1E;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* _____________footer______________ */
+
+.footer-bottom {
+    background-color: #01c38d;
+    padding: 7px;
+    text-align: center;
+}
+
+/* _____________sign up_________________________ */
+
+
+* {box-sizing: border-box}
+
+
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+button {
+ 
+  background-color: #287094;
+  color: white;
+  padding: 14px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+ 
+ 
+}
+
+button:hover {
+    background-color: #04AA6D;
+}
+
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+  
+}
+
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 100%;
+}
+
+
+.container {
+  padding: 16px;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: #0A2940;
+  padding-top: 50px;
+}
+
+.modal-content {
+  background-color: #132d46;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 90%; 
+  color: #287094;
+}
+
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

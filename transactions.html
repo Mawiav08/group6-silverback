@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <link rel = "stylesheet" href="/styles.css">
+</head>
+<body>
+    <section id="transactions">
+        <div class="transaction-form">
+            <h2>WELCOME!
+                <br>Add a New Transaction</h2>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" required>
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="income">Income</option>
+                <option value="expenses">Expenses</option>
+                <option value="withdrawals">Withdrawals</option>
+                <option value="deposit">deposit</option>
+            </select>
+            <label for="notes">Notes:</label>
+            <textarea id="notes"></textarea>
+            <button onclick="addTransaction()">Add Transaction</button>
+        </div>
+    
+        <div id="transaction-list"></div>
+    </section>    
+</body>
+</html>

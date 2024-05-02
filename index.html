@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOLD BANK SAVINGS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h2>GOLD BANK SAVINGS </h2>
+    </header>
+
+    <nav>
+        <ul>
+
+            <li><a href="#home">Home</a> </li>
+            <li> <a href="goals">Goals</a> </li>
+            <li> <a href="transactions.html">Transactions</a> </li>
+            <li><a href="signup">Sign up</a></li>
+            <li> <a href="contacts">Contacts</a> </li>
+            
+
+        </ul>
+    </nav>
+<!-- ____________________home_________________ -->
+<section id="home">
+    <div id="Home">
+        <h1>Your Trusted Partner <br> for Secure Savings <br> <span> & Smart Investment!</span></h1>
+        <hr>
+            <p>Discover the Power of Financial Freedom with Gold Bank Savings.</p>
+    </div>
+</section>
+<!-- ___________________________login________________________________________________ -->
+<button class="login" onclick="document.getElementById('id01').style.display='block'">JOIN US TODAY!</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p> Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signup">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+    <!--______________goal____________-->
+    <section id="goals">
+    <div class="goal-container">
+        <h2>Create a New Goal</h2>
+        <div class="goal" id="new-goal">
+            <label for="new-goal-name">Goal Name:</label>
+            <input type="text" id="new-goal-name" required>
+            <label for="new-goal-amount">Amount:</label>
+            <input type="number" id="new-goal-amount" required>
+            <div class="goal-buttons">
+                <button onclick="createGoal()">Create</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="goal-container">
+        <!-- <h2> My Savings Goals</h2> -->
+        <div id="goal-list"></div>
+    </div>
+</section>
+  
+
+<!-- _________________contacts__________________ -->
+<section id="contact">
+    <h2 class="text-center">Subscribe To Our Newsletter</h2>
+    <p class="text-center">We get back to our clients within 24 hours. Feel free to ask us anything!</p>
+    <div class="wrapper">
+        <form class="text-center">
+            <input type="email" name="email" id="email" placeholder="Enter Email Address">
+            <button class="button">Submit</button>
+        </form>
+    </div>
+</section>
+
+<!-- _________footer________ -->
+<footer class="footer-bottom">
+    <p>Copyright &copy; 2024 by Group-6 Silverback. All Rights Reserved.</p>
+
+
+
+</footer>
+
+
+
+
+
+</body>
+
+</html>
