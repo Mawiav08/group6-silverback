@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transactions</title>
     <link rel = "stylesheet" href="/styles.css">
+    <script defer src="/script.js"></script>
 </head>
 <body>
     <section id="transactions">
@@ -13,6 +14,8 @@
                 <br>Add a New Transaction</h2>
             <label for="amount">Amount:</label>
             <input type="number" id="amount" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
             <label for="category">Category:</label>
             <select id="category">
                 <option value="income">Income</option>
@@ -23,6 +26,7 @@
             <label for="notes">Notes:</label>
             <textarea id="notes"></textarea>
             <button onclick="addTransaction()">Add Transaction</button>
+           
         </div>
     
         <div id="transaction-list"></div>

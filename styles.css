@@ -166,6 +166,20 @@ button {
     cursor: pointer;
 }
 
+.cancel-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cancel-button:hover {
+    background-color: darkred;
+}
+
 .transaction {
     border: 1px solid #ccc;
     border-radius: 5px;

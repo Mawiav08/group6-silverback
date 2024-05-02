@@ -102,28 +102,39 @@ function deleteGoal(index) {
 //_____________________________________________________________________________________________
 
 
-// transactions
+// Transactions
 
 function addTransaction() {
     // Get input values
     var amount = document.getElementById("amount").value;
     var category = document.getElementById("category").value;
     var notes = document.getElementById("notes").value;
+    var date= document.getElementById("date").value;
 
     // Create transaction element
     var transactionElement = document.createElement("div");
     transactionElement.classList.add("transaction");
     transactionElement.classList.add(category);
-    transactionElement.innerHTML = "<p>Amount: " + amount + "</p><p>Category: " + category + "</p>";
+    transactionElement.innerHTML = "<p>Amount: " + amount + "</p><p>Date: " + date + "</p><p>Category: " + category + "</p>";
     if (notes !== "") {
         transactionElement.innerHTML += "<p>Notes: " + notes + "</p>";
     }
+     // Create cancel button for this transaction
+     var cancelButton = document.createElement("button");
+     cancelButton.textContent = "Cancel Transaction";
+     cancelButton.onclick = function() {
+         // Remove this transaction from the list
+         transactionList.removeChild(transactionElement);
+     };
+     transactionElement.appendChild(cancelButton);
 
     // Append transaction element to transaction list
     var transactionList = document.getElementById("transaction-list");
     transactionList.appendChild(transactionElement);
 
+    
     // Clear input fields
     document.getElementById("amount").value = "";
     document.getElementById("notes").value = "";
+    document.getElementById("date").value="";
 }
