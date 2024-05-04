@@ -15,92 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-//___________________________________________
-
-
-// login form
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-// _____________________________________________
-
-
-//goal
-let goals = [];
-
-function createGoal() {
-    const nameInput = document.getElementById("new-goal-name");
-    const amountInput = document.getElementById("new-goal-amount");
-
-    const name = nameInput.value;
-    const amount = amountInput.value;
-
-    if (name.trim() === "" || amount.trim() === "") {
-        alert("Please enter both a name and an amount for the goal.");
-        return;
-    }
-
-    goals.push({ name, amount });
-
-    renderGoals();
-
-    nameInput.value = "";
-    amountInput.value = "";
-}
-
-function renderGoals() {
-    const goalList = document.getElementById("goal-list");
-    goalList.innerHTML = "";
-
-    goals.forEach((goal, index) => {
-        const goalElement = document.createElement("div");
-        goalElement.classList.add("goal");
-        goalElement.innerHTML = `
-            <label for="goal-name-${index}">Goal Name:</label>
-            <input type="text" id="goal-name-${index}" value="${goal.name}" required>
-            <label for="goal-amount-${index}">Amount:</label>
-            <input type="number" id="goal-amount-${index}" value="${goal.amount}" required>
-            <div class="goal-buttons">
-                <button onclick="editGoal(${index})">Edit</button>
-                <button onclick="deleteGoal(${index})">Delete</button>
-            </div>
-        `;
-        goalList.appendChild(goalElement);
-    });
-}
-
-function editGoal(index) {
-    const nameInput = document.getElementById(`goal-name-${index}`);
-    const amountInput = document.getElementById(`goal-amount-${index}`);
-
-    const newName = nameInput.value;
-    const newAmount = amountInput.value;
-
-    if (newName.trim() === "" || newAmount.trim() === "") {
-        alert("Please enter both a name and an amount for the goal.");
-        return;
-    }
-
-    goals[index].name = newName;
-    goals[index].amount = newAmount;
-
-    renderGoals();
-}
-
-function deleteGoal(index) {
-    goals.splice(index, 1);
-    renderGoals();
-}
-
-
-//_____________________________________________________________________________________________
-
 
 // Transactions
 
@@ -137,4 +51,83 @@ function addTransaction() {
     document.getElementById("amount").value = "";
     document.getElementById("notes").value = "";
     document.getElementById("date").value="";
+}
+
+// About us
+let slideIndex = 1;
+
+function showSlide(n) {
+  const slides = document.getElementsByClassName("slide");
+  const dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) { 
+    slideIndex = 1; 
+  } 
+  if (n < 1) { 
+    slideIndex = slides.length; 
+  }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+
+function changeSlide(n) {
+  showSlide(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlide(slideIndex = n);
+}
+
+showSlide(slideIndex);
+
+setInterval(function() {
+  changeSlide(1);
+}, 5000);
+
+let highlightIndex = 1;
+
+function showHighlight(n) {
+  const slides = document.querySelectorAll('.highlight-slide');
+  if (n > slides.length) {
+    highlightIndex = 1;
+  } else if (n < 1) {
+    highlightIndex = slides.length;
+  }
+  
+  slides.forEach(slide => slide.style.display = 'none');
+  slides[highlightIndex - 1].style.display = 'block';
+}
+
+function carousel(n) {
+  showHighlight(highlightIndex += n);
+}
+
+showHighlight(highlightIndex);
+
+function handleSearch() {
+    const searchInput = document.getElementById('search').value.toLowerCase(); 
+    const cards = document.querySelectorAll('.sponsors .card'); 
+    
+    let foundCard = null;
+    
+    cards.forEach(card => {
+        if (card.textContent.toLowerCase().includes(searchInput)) {
+            foundCard = card; 
+        }
+    });
+    
+    if (foundCard) {
+        foundCard.scrollIntoView({ behavior: 'smooth' }); 
+    } else {
+        alert('Sponsor not found'); 
+    }
 }

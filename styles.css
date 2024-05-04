@@ -1,130 +1,110 @@
-body {
-    font-family: 'Times New Roman', Times, serif;
-    padding: 0;
-    margin: 0;
-    
-    
-  
-}
+* {
+    margin: 0%;
+    padding: 0%;
 
-header {
-    text-align: center;
-    background-color: #132d46;
-    padding: 7px;
+}
+/* ______Top navbar____________ */
+
+.showcase .navbar-top{
     width: 100%;
-    color: aliceblue;
+    display: flex;
+    padding: 0 80px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0A2940;
+    top: 0;
+    left: 0;
 }
-
-/* _____________________________________________ */
-
-nav {
-   width: 100%;
-    padding: 10px;
-    overflow: hidden;
-    background-color: #132d46;
-    
-
-}
-ul {
- 
+.showcase .left{
+    display: flex;
     list-style: none;
-   
-   padding: 0;
+}
+.showcase .left li a{
+    display: inline-block;
+    font-size: 13px;
+    text-decoration: none;
+    color: #95A2BB;
+    padding: 5px 15px;
+    transition: all 0.5s ease;
+}
+.showcase .left li a:hover{
+    color: #55BA53;
+}
+.showcase .left li:first-child{
+    font-weight: 700;
+    border-right: 1px solid #536DAF;
 }
 
 
-li {
-    float: left;
-    margin: 0 20px;
-   
-   
-  }
-  
-  a {
-  
-    float: left;
-  display: block;
-  color: gainsboro;
-  text-align: center;
-  padding-right: 40px;
-  padding-left: 40px;
-  text-decoration: none;
-  font-size: 17px;
-  font-size: 20px;
-   
-  }
-
-  a:hover {
-    color:  #01c38d;
-  }
-  /* ________________________________________ */
-
-#Home {
+/* _______Bottom Navbar_________ */
+.showcase .navbar-bottom{
     width: 100%;
-    height: 900px;
-   padding-top: 100px;
-   background-color: #191e29;
+    background: #cfcfcf;
+    padding: 25px;
+    align-items: center;
+    margin:  auto;
+    display: flex;
+    position: fixed; 
+    justify-content: space-between;
+    overflow: hidden;
+}
+.navbar-bottom.sticky{
+    padding: 15px 95px;
+    background: #fff;
+    border-bottom: 1px solid #0A2940;
+    color: #0A2940;
+    top: 0;
+    z-index: 999;
+}
+.showcase .navbar-bottom .brand-left{
+    color: #55BA53;
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+    
+}
+.showcase .navbar-bottom.sticky .brand-left{
+    color: #0A2940;
+}
+.showcase .navbar-bottom .brand-left:hover{
+    color: #0A2940;
+}
+.showcase .navbar-bottom .menu-right{
+    display: flex;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.showcase .navbar-bottom .menu-right a{
+    text-decoration: none;
+    display: inline-block;
+    padding:  0 20px;
+    color: #1A1B1E;
+    
+}
+.showcase .navbar-bottom .menu-right a:hover{
+    color: #55BA53;
+}
+
+/* ______home____________ */
+#Home {
+    padding: 290px;
+    font-size: 30px;
+    background-color: #0d1321;
+    height: 500px;
+    
 }
 
 #Home h1 {
-    font-size: 70px;
-    color: #01c38d;
+    color: #28b67e;
 }
-#Home h1 span {
-    font-weight: lighter;
-    color: white;
-}
+
 #Home p {
-    font-size: 30px;
-    color: #01c38d;
+    color: #ece9e9;
 }
-/* ___________________________________________________ */
-
-
-/* ___________________________________________________________________goal_________________________________________________________________________*/
-#goals {
-    background-color: #287094;
-}
-.goal-container {
-    margin-bottom: 0px;
-    background-color: #287094;
-    margin: 0px;
-   
-    
-}
-.goal-container h2 {
-    text-align: center;
-    color: aliceblue;
-}
-.goal {
-   
-    border-radius: 5px;
-    padding: 30px;
-    margin-bottom: 10px;
-    
-    color: aliceblue;
-}
-.goal input[type="text"],
-.goal input[type="number"] {
-    width: 200px;
-    height: 30px;
-    margin-bottom: 5px;
-}
-.goal-buttons {
-    margin-top: 10px;
-  
-}
-
-button {
-    background-color: #a3b5c0;
-    border-radius: 6px;
-    color: black
-    
-}
-
-/*__________________________________________________________________e n d o f g o a l_____________________________________________________________ */
-
-
 
 /* transactions__________________________________________________ */
 
@@ -198,79 +178,8 @@ button {
 .transaction.income {
     background-color: #CCFFCC;
 }
-/* _________________contacts_________________________ */
 
-
-#contact h2{
-    font-size: 30px;
-    font-weight: 600;
-    color: #132d46;
-    margin-bottom: 10px;
-    text-align: center;
-}
-#contact p{
-    color: #0A2940;
-    line-height: 1.6;
-    margin-bottom: 5px;
-    text-align: center;
-}
-#contact .wrapper form{
-    display: flex;
-    flex-direction: column;
-    max-width: 550px;
-    margin: 0 auto;
-}
-#contact .wrapper form input{
-    padding: 8px;
-    border: #ddd 1px solid;
-    outline: none;
-    border-radius: 5px;
-    margin: 15px 0;
-}
-#contact .wrapper form .button{
-    padding: 8px;
-    margin-bottom: 100px;
-    background: #0A2940;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-#contact .wrapper form .button:hover{
-    background: #1A1B1E;
-    color: #fff;
-    cursor: pointer;
-}
-
-/* _____________footer______________ */
-
-.footer-bottom {
-    background-color: #01c38d;
-    padding: 7px;
-    text-align: center;
-}
-
-/* _____________sign up_________________________ */
-
-
-* {box-sizing: border-box}
-
-
-  input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
+/* _____________button_________________________ */
 
 
 button {
@@ -308,35 +217,6 @@ button:hover {
   padding: 16px;
 }
 
-
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: #0A2940;
-  padding-top: 50px;
-}
-
-.modal-content {
-  background-color: #132d46;
-  margin: 5% auto 15% auto; 
-  border: 1px solid #888;
-  width: 90%; 
-  color: #287094;
-}
-
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-
 .close {
   position: absolute;
   right: 35px;
@@ -352,9 +232,90 @@ hr {
   cursor: pointer;
 }
 
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+/* _____________about us_________________________ */
+
+img {
+    width: 20px;
+  }
+  
+  .caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 18px;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  .dots {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: black;
+  }
+  .highlight-carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .highlight-slide {
+    display: none;
+  }
+  
+  .highlight-slide img {
+    width: 100%;
+  }
+  
+  .carousel-prev, .carousel-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+  }
+  
+  .carousel-prev {
+    left: 0;
+  }
+  
+  .carousel-next {
+    right: 0;
+  }
+  
