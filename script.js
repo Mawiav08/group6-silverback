@@ -16,8 +16,39 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Transactions
+// Goals
+function addGoal() {
+    // Get input values
+    var goalName = document.getElementById("goal-name").value;
+    var description = document.getElementById("goal-description").value;
+    var deadline = document.getElementById("date").value;
 
+    // Create goal element
+    var goalElement = document.createElement("div");
+    goalElement.classList.add("goal-item");
+    goalElement.innerHTML = "<p>Goal Name: " + goalName + "</p><p>Description: " + description + "</p><p>Deadline: " + deadline + "</p>";
+
+    // Create cancel button for this goal
+    var cancelButton = document.createElement("button");
+    cancelButton.textContent = "Cancel Goal";
+    cancelButton.onclick = function() {
+        // Remove this goal from the list
+        goalList.removeChild(goalElement);
+    };
+    goalElement.appendChild(cancelButton);
+
+    // Append goal element to goal list
+    var goalList = document.getElementById("goal-list");
+    goalList.appendChild(goalElement);
+
+    // Clear input fields
+    document.getElementById("goal-name").value = "";
+    document.getElementById("goal-description").value = "";
+    document.getElementById("date").value = "";
+}
+
+
+// Transactions
 function addTransaction() {
     // Get input values
     var amount = document.getElementById("amount").value;
@@ -53,81 +84,3 @@ function addTransaction() {
     document.getElementById("date").value="";
 }
 
-// About us
-let slideIndex = 1;
-
-function showSlide(n) {
-  const slides = document.getElementsByClassName("slide");
-  const dots = document.getElementsByClassName("dot");
-
-  if (n > slides.length) { 
-    slideIndex = 1; 
-  } 
-  if (n < 1) { 
-    slideIndex = slides.length; 
-  }
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
-
-function changeSlide(n) {
-  showSlide(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlide(slideIndex = n);
-}
-
-showSlide(slideIndex);
-
-setInterval(function() {
-  changeSlide(1);
-}, 5000);
-
-let highlightIndex = 1;
-
-function showHighlight(n) {
-  const slides = document.querySelectorAll('.highlight-slide');
-  if (n > slides.length) {
-    highlightIndex = 1;
-  } else if (n < 1) {
-    highlightIndex = slides.length;
-  }
-  
-  slides.forEach(slide => slide.style.display = 'none');
-  slides[highlightIndex - 1].style.display = 'block';
-}
-
-function carousel(n) {
-  showHighlight(highlightIndex += n);
-}
-
-showHighlight(highlightIndex);
-
-function handleSearch() {
-    const searchInput = document.getElementById('search').value.toLowerCase(); 
-    const cards = document.querySelectorAll('.sponsors .card'); 
-    
-    let foundCard = null;
-    
-    cards.forEach(card => {
-        if (card.textContent.toLowerCase().includes(searchInput)) {
-            foundCard = card; 
-        }
-    });
-    
-    if (foundCard) {
-        foundCard.scrollIntoView({ behavior: 'smooth' }); 
-    } else {
-        alert('Sponsor not found'); 
-    }
-}

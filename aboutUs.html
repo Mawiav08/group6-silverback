@@ -3,166 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>About Us</title>
-    <style>
-    body {
-  font-family: Arial, sans-serif;
-  background-color: #ddbe0b;
-}
-    </style>
+    <title>About Akiba Savings</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  
-  <div class="container">
-    <div class="search-container">
-      <input type="text" id="search" placeholder="Search for a sponsor...">
-      <button onclick="handleSearch()">Search</button>
+    <h1>About Akiba Savings</h1>
+    <div class="dropdown">
+        <span>Menu</span>
+        <div class="dropdown-content">
+            <a href="#contacts">Contacts</a>
+            <a href="#sponsors">Sponsors</a>
+            <a href="#reviews">Reviews</a>
+        </div>
     </div>
-  </div>
-  
+    
 
-<div class="slideshow-container">
-  <div class="slide">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrxJt-nAb9biQPm4VT4Y3OA2kPGpMzEFrz_XiaZ4Do0w&s" alt="Sponsor 1" style="width:100%">
-    <div class="caption">Sponsor 1</div>
-  </div>
-  <div class="slide">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1b6enP5ypOKqqPmo4BN_aFdb1DoiQucizuVfhKqDhJQ&s" alt="Sponsor 2" style="width:100%">
-    <div class="caption">Sponsor 2</div>
-  </div>
-  <div class="slide">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdlse3uWfX6YO1IaAtip9v7RjEe4iRw0rXwdXpo8T9NA&s" alt="Sponsor 3" style="width:100%">
-    <div class="caption">Sponsor 3</div>
-  </div>
-  <div class="slide">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrDEmvgMgHJwbCWYTHdX_C8-aUSg-ERKNZGbzK9qO3EA&s" alt="Sponsor 3" style="width:100%">
-    <div class="caption">Sponsor 4</div>
-  </div>
-  <div class="slide">
-    <img src="https://seeklogo.com/images/K/kenya-power-and-lighting-logo-0E49074D60-seeklogo.com.png" alt="Sponsor 3" style="width:100%">
-    <div class="caption">Sponsor 5</div>
-  </div>
-  <div class="slide">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvxX4SB-LOs_GUZNUYTavg6cm4QufsvwCnrRE_c0JWvA&s" alt="Sponsor 3" style="width:100%">
-    <div class="caption">Sponsor 6</div>
-  </div>
-  <div class="slide">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQicoh6t_yHgXpI4YYS5HNJ7tVtxP6CJ2fdS6_abg1M9Q&s" alt="Sponsor 3" style="width:100%">
-    <div class="caption">Sponsor 7</div>
-  </div>
-  <div class="slide">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYtUJFweKbC0hQBqmTAQooMOEVMxUlcy9APwjyV_GyDg&s" alt="Sponsor 3" style="width:100%">
-    <div class="caption">Sponsor 8</div>
-  </div>
-  <div class="slide">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8SwQYwykNlc7HvlDXvqwjBtQdsGl5ldZkvWFWeKCGnA&s" alt="Sponsor 3" style="width:100%">
-    <div class="caption">Sponsor 9</div>
-  </div>
-  <div class="slide">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBqizf1viB2XvT9rjbjUeParrN2YHiRKRlljs26TDTcg&s" alt="Sponsor 3" style="width:100%">
-    <div class="caption">Sponsor 10</div>
-  </div>
- 
- 
-  
+    <p>Welcome to Akiba Savings, where we aim to provide users with a user-friendly interface to monitor and manage their finances effectively. Our mission is to empower individuals to make informed financial decisions and achieve their financial goals.</p>
 
-  
-  <!-- Navigation Controls -->
-  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-  <a class="next" onclick="changeSlide(1)">&#10095;</a>
-</div>
+    <h2>Foundation</h2>
+    <p>Akiba Savings was founded with the goal of addressing the challenge of pooling all savings into a single account. We understand that managing finances can be overwhelming, and traditional banking systems may not always meet the needs of individuals seeking to allocate their funds into designated goals.</p>
+    <p>Our platform offers a solution by allowing users to create, track, and manage savings goals conveniently. Whether you're saving for a vacation, a new car, or a down payment on a house, Akiba Savings provides the tools you need to stay on track.</p>
 
-<!-- Slideshow Dots -->
-<div class="dots">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-<div class="sponsors" id="sponsors">
-    <h1>Our Sponsorship Partners</h1>
-    <div class="card card1">
-      <h2>1. Equity</h2>
-      <p>Account type: saving</p>
-      <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrxJt-nAb9biQPm4VT4Y3OA2kPGpMzEFrz_XiaZ4Do0w&s" alt="Equity"></p>
-    </div>
-    
-    <div class="card card2">
-      <h2>2. Safaricom</h2>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1b6enP5ypOKqqPmo4BN_aFdb1DoiQucizuVfhKqDhJQ&s" alt="Safaricom">
-    </div>
-    
-    <div class="card card3">
-      <h2>3. KCB</h2>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdlse3uWfX6YO1IaAtip9v7RjEe4iRw0rXwdXpo8T9NA&s" alt="KCB">
-    </div>
-    
-    <div class="card card4">
-      <h2>4. Coca-Cola</h2>
-      <p>Account type: saving</p>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrDEmvgMgHJwbCWYTHdX_C8-aUSg-ERKNZGbzK9qO3EA&s">
-    </div>
-    
-    <div class="card card5">
-      <h2>5. Kenya Power</h2>
-      <img src="https://seeklogo.com/images/K/kenya-power-and-lighting-logo-0E49074D60-seeklogo.com.png" alt="Kenya Power">
-    </div>
-    
-    <div class="card card6">
-      <h2>6. Nation Media Group</h2>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvxX4SB-LOs_GUZNUYTavg6cm4QufsvwCnrRE_c0JWvA&s" alt="Nation Media Group">
-    </div>
-    
-    <div class="card card7">
-      <h2>7. Cooperative Bank</h2>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQicoh6t_yHgXpI4YYS5HNJ7tVtxP6CJ2fdS6_abg1M9Q&s" alt="Cooperative Bank">
-    </div>
-    
-    <div class="card card8">
-      <h2>8. Telkom</h2>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYtUJFweKbC0hQBqmTAQooMOEVMxUlcy9APwjyV_GyDg&s" alt="Telkom">
-    </div>
-    
-    <div class="card card9">
-      <h2>9. Bamburi</h2>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8SwQYwykNlc7HvlDXvqwjBtQdsGl5ldZkvWFWeKCGnA&s" alt="Bamburi">
-    </div>
-    
-    <div class="card card10">
-      <h2>10. Barclays Bank</h2>
-      <p>Barclays Bank supports financial literacy programs and community development projects. They are known for their extensive community outreach and investment in local education.</p>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBqizf1viB2XvT9rjbjUeParrN2YHiRKRlljs26TDTcg&s" alt="Barclays Bank">
-    </div>
-  </div>
-  <div class="community" id="community">
-    <h2>Our Commitment to the Community</h2>
+    <h2>MVP Features</h2>
     <ul>
-      <li>Supporting education through scholarships and grants</li>
-      <li>Promoting health and fitness through sports events</li>
-      <li>Encouraging art and culture through festivals and exhibitions</li>
-      <li>Investing in sustainability and environmental conservation</li>
-      <li>Engaging in community outreach programs and initiatives</li>
+        <li>Enable users to create, edit, and delete savings goals.</li>
+        <li>Allow users to set a target amount and optionally, allocate funds towards each goal.</li>
+        <li>Allow users to view a list of their recent transactions.</li>
+        <li>Enable users to categorize transactions (e.g., income, expenses) and add notes if necessary.</li>
     </ul>
-  </div>
-  
-  <div class="sponsorship-initiatives">
-    <p>Our sponsors are involved in a range of initiatives designed to benefit the community and promote positive change. Here are some ongoing initiatives supported by our sponsorship partners:</p>
-    <ul>
-      <li><strong>Financial Literacy Workshops:</strong> Our sponsors host workshops to educate people on financial planning, budgeting, and investment strategies.</li>
-      <li><strong>Sports Events and Competitions:</strong> Several sponsors support sports events, including marathons, football tournaments, and basketball leagues, promoting health and fitness.</li>
-      <li><strong>Art and Culture Festivals:</strong> We have sponsors who support local art and culture events, fostering creativity and providing platforms for artists to showcase their talents.</li>
-      <li><strong>Environmental Conservation Programs:</strong> Some sponsors are actively involved in environmental conservation, supporting tree planting initiatives and beach clean-up events.</li>
-      <li><strong>Educational Scholarships and Grants:</strong> Many sponsors contribute to educational scholarships and grants to support students in achieving their academic goals.</li>
-    </ul>
-  </div>
-  
-  <div class="recent-highlights">
-    <p>Here are some recent highlights from our sponsorship partners:</p>
-    <ul>
-      <li><strong>Safaricom Marathon:</strong> Safaricom sponsored a marathon event that attracted participants from across the country, raising funds for community development projects.</li>
-      <li><strong>Kenya Power Tree Planting Drive:</strong> Kenya Power led a successful tree planting drive, contributing to environmental sustainability in various regions.</li>
-      <li><strong>Cooperative Bank Entrepreneurship Awards:</strong> Cooperative Bank hosted its annual entrepreneurship awards, recognizing outstanding entrepreneurs and supporting new business ventures.</li>
-    </ul>
-  </div>
+
+
+    <section id="contacts">
+        <h2>Contacts</h2>
+        <p>For more information or inquiries, please contact us at <a href="mailto:info@akibasavings.com">info@akibasavings.com</a>.</p>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section id="sponsors">
+        <h2>Sponsors</h2>
+        <p>Our sponsors are involved in a range of initiatives designed to benefit the community and promote positive change. Here are some ongoing initiatives supported by our sponsorship partners:</p>
+        <ul>
+          <li><strong>Financial Literacy Workshops:</strong> Our sponsors host workshops to educate people on financial planning, budgeting, and investment strategies.</li>
+          <li><strong>Sports Events and Competitions:</strong> Several sponsors support sports events, including marathons, football tournaments, and basketball leagues, promoting health and fitness.</li>
+          <li><strong>Art and Culture Festivals:</strong> We have sponsors who support local art and culture events, fostering creativity and providing platforms for artists to showcase their talents.</li>
+          <li><strong>Environmental Conservation Programs:</strong> Some sponsors are actively involved in environmental conservation, supporting tree planting initiatives and beach clean-up events.</li>
+          <li><strong>Educational Scholarships and Grants:</strong> Many sponsors contribute to educational scholarships and grants to support students in achieving their academic goals.</li>
+        </ul>
+        <h1>Our Sponsorship Partners</h1>
+        <div class="card card1">
+          <h2>1. Equity</h2>
+          <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrxJt-nAb9biQPm4VT4Y3OA2kPGpMzEFrz_XiaZ4Do0w&s" alt="Equity"></p>
+        </div>
+        
+        <div class="card card2">
+          <h2>2. Safaricom</h2>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1b6enP5ypOKqqPmo4BN_aFdb1DoiQucizuVfhKqDhJQ&s" alt="Safaricom">
+        </div>
+        
+        <div class="card card3">
+          <h2>3. KCB</h2>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdlse3uWfX6YO1IaAtip9v7RjEe4iRw0rXwdXpo8T9NA&s" alt="KCB">
+        </div>
+        
+        <div class="card card4">
+          <h2>4. Coca-Cola</h2>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrDEmvgMgHJwbCWYTHdX_C8-aUSg-ERKNZGbzK9qO3EA&s">
+        </div>
+        
+        <div class="card card5">
+          <h2>5. Kenya Power</h2>
+          <img src="https://seeklogo.com/images/K/kenya-power-and-lighting-logo-0E49074D60-seeklogo.com.png" alt="Kenya Power">
+        </div>
+        
+        <div class="card card6">
+          <h2>6. Nation Media Group</h2>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvxX4SB-LOs_GUZNUYTavg6cm4QufsvwCnrRE_c0JWvA&s" alt="Nation Media Group">
+        </div>
+        
+        <div class="card card7">
+          <h2>7. Cooperative Bank</h2>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQicoh6t_yHgXpI4YYS5HNJ7tVtxP6CJ2fdS6_abg1M9Q&s" alt="Cooperative Bank">
+        </div>
+        
+        <div class="card card8">
+          <h2>8. Telkom</h2>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYtUJFweKbC0hQBqmTAQooMOEVMxUlcy9APwjyV_GyDg&s" alt="Telkom">
+        </div>
+        
+        <div class="card card9">
+          <h2>9. Bamburi</h2>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8SwQYwykNlc7HvlDXvqwjBtQdsGl5ldZkvWFWeKCGnA&s" alt="Bamburi">
+        </div>
+        
+        <div class="card card10">
+          <h2>10. Barclays Bank</h2>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBqizf1viB2XvT9rjbjUeParrN2YHiRKRlljs26TDTcg&s" alt="Barclays Bank">
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <h2>Reviews</h2>
+        <!-- Insert reviews information here -->
+    </section>
 </body>
 </html>

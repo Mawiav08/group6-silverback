@@ -105,8 +105,80 @@
 #Home p {
     color: #ece9e9;
 }
+/*_______________________goals___________________________*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #ece9e9;
+    color: #fff;
+}
 
-/* transactions__________________________________________________ */
+h2 {
+    text-align: center;
+}
+
+.goal-form {
+    background-color: #1d4c4f;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.goal-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.goal-form input[type="text"],
+.goal-form textarea,
+.goal-form input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.goal-form button {
+    background-color: #28b67e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.goal-form button:hover {
+    background-color: #1d4c4f;
+}
+
+#goal-list {
+    margin-top: 20px;
+}
+
+.goal-item {
+    background-color: #dcd3de;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.goal-item button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.goal-item button:hover {
+    background-color: #d32f2f;
+}
+
+/* _____________________transactions__________________________________________________ */
 
 .transaction-form {
     max-width: 100%;
@@ -234,88 +306,32 @@ button:hover {
 
 /* _____________about us_________________________ */
 
-img {
-    width: 20px;
-  }
-  
-  .caption {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 5px;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    font-size: 18px;
-    padding: 16px;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .prev {
-    left: 0;
-  }
-  
-  .next {
-    right: 0;
-  }
-  
-  .dots {
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .dot {
-    cursor: pointer;
-    height: 10px;
-    width: 10px;
-    margin: 0 2px;
-    background-color: gray;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.3s;
-  }
-  
-  .dot.active {
-    background-color: black;
-  }
-  .highlight-carousel {
-    position: relative;
-    overflow: hidden;
-    max-width: 100%;
-    text-align: center;
-  }
-  
-  .highlight-slide {
-    display: none;
-  }
-  
-  .highlight-slide img {
-    width: 100%;
-  }
-  
-  .carousel-prev, .carousel-next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-  }
-  
-  .carousel-prev {
-    left: 0;
-  }
-  
-  .carousel-next {
-    right: 0;
-  }
-  
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #0d1321;
+    color: #d3dcde;
+}
+
+h1, h2, h3 {
+    color: #ece9e9;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+a {
+    color: #28b67e;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals</title>
+    <link rel = "stylesheet" href="/styles.css">
+    <script defer src="/script.js"></script>
+</head>
+<body>
+    <section id="goals">
+        <div class="goal-form">
+            <h2>WELCOME!
+                <br>Add a New Goal</h2>
+            <label for="goal-name">Goal Name:</label>
+            <input type="text" id="goal-name" required>
+            <label for="goal-description">How much would you like to save:</label>
+            <textarea id="goal-description"></textarea>
+            <label for="date">When would you want to achieve this by:</label>
+            <input type="date" id="date" required>
+            <button onclick="addGoal()">Add Goal</button>
+        </div>
+    
+        <div id="goal-list"></div>
+    </section>    
+</body>
+</html>
